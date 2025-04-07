@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <title>html page3</title>
+   <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    ol li{
+        list-style-type: none;
+       
+    }
+    li{
+        padding: 10px;
+    }
+    ol{
+        display: flex;
+    }
+    input{
+        border:none;
+        width:700px;
+        height: 20px;
+        font-size:20px;
+        background-color: rgb(245, 247, 246);
+    }
+    input:focus{
+        outline:none;
+    }
+    .a{
+        background-color: rgb(246, 248, 247);
+        margin:12px;
+        border-radius: 5px;
+    }
+    .a1{
+        font-size: 20px;
+    }
+    
+    .fa{
+        padding: 5px;
+    }
+    .x{
+        background-color: white;
+        margin-top: 5px;
+    }
+    body{
+        background-color: rgb(233, 230, 237);
+    }
+    
+    .f1{
+        margin-top: 10px;
+        border:1px solid gray;
+        padding: 20px;
+        margin-right: 10px;
+    }
+    
+    tr th{
+        font-size: 20px;
+        padding: 10px;
+        padding-right: 30px;
+    }
+    a{
+        text-decoration: none;
+    }
+   </style>
+</head>
+<body>
+    <div class="x">
+        <ol>
+            <li> <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg"></li>
+             <div class="a"><li ><i class="fa fa-search"></i><input type="text"placeholder="Search for Products,Brands and More"></li></div>
+             
+            <a href={% url 'htmlpage1' %}><li class="a1"> <i class="fa fa-user-circle" ></i> Login <i class="fa  fa-chevron-down"></i></li></a>
+            <a href={% url 'htmlpage2' %}><li class="a1">Sign Up</li></a>
+             <li class="a1"><i class="fa fa-shopping-cart" ></i> cart </li>
+             <li class="a1"><i class="fa " ></i> Become a Seller</li>
+        </ol>
+    </div>
+    
+    <div class="f1">
+    <table>
+        <thead>
+            <tr>
+                <th>s.no</th>
+                <th>mail</th>
+                <th>phone</th>
+                <th>pwd</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in data %}
+            <tr>
+                <td>{{record.id}}</td>
+                <td>{{ record.mail }}</td>
+                <td>{{ record.phone }}</td>
+                <td>{{record.pwd}}</td>
+                <td><a href={% url 'htmlpage4' record.id %} ><h6><i class="fa fa-edit "></i>Edit</h6></a><a href=" "><h6><i class="fa fa-remove  "></i> Delete</h6></td></a>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+  
+<script>
+   
+    
+</script>
+</body>
+</html>

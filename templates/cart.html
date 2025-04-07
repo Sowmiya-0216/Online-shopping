@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <title>My Template</title>
+   <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    ol li{
+        list-style-type: none;
+       
+    }
+    li{
+        padding: 10px;
+    }
+    ol{
+        display: flex;
+        
+    }
+    input{
+        border:none;
+        width:700px;
+        height: 20px;
+        font-size:20px;
+        background-color: rgb(245, 247, 246);
+    }
+    input:focus{
+        outline:none;
+    }
+    a{
+        text-decoration: none;
+    }
+    .a{
+        background-color: rgb(246, 248, 247);
+        margin:20px;
+        border-radius: 5px;
+    }
+    
+    .a1{
+        background-color: white;
+        color:rgb(81, 118, 220);
+        font-size: 20px;
+        margin-left: 300px;
+        margin-top: 20px;
+        height: 35px;
+        width: 100px;
+        padding: 15px;
+    }
+    
+    .fa{
+        padding: 5px;
+    }
+    .x{
+        background-color: rgb(81, 118, 220);
+        
+    }
+    body{
+        background-color: rgb(233, 230, 237);
+    }
+    .x1{
+        margin-left: 20px;
+    }
+    p{
+      padding-bottom: 10px;
+      margin-top: 20px; 
+    }
+    .x3{
+        margin-top: 20px;
+        border: none;
+        height: 400px;
+        width:1200px;
+        background-color: white;
+    }
+    .b{
+        margin-top: 20px;
+    }
+    h3{
+        margin-top: 20px;
+    }
+    h4{
+        background-color: coral;
+        height: 40px;
+        width: 80px;
+        padding: 10px;
+        margin-top: 20px;
+       
+    }
+   </style>
+</head>
+<body>
+    <div class="x">
+        <ol>
+             <div class="x1">
+            <li> <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png" width="80px"></li>
+              <li>Explore plus<img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png" width="10px"></li>
+            </div>
+             <div class="a"><li ><input type="text"placeholder="Search for Products,Brands and More"><i class="fa fa-search"></i></li></div>
+             
+            <li class="a1"> Login </li>
+             
+        </ol>
+    </div>
+    <center>
+    <div class="x3">
+        <img src="https://rukminim2.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" width="200px" class="b">
+        <h3>Missing Cart items?</h3>
+        <p>Login to see the items you added previously</p>
+        <h4><a href={% url 'htmlpage1' %}>Login</a></h4>
+    </div>
+    </center>
+    
+<script>
+   
+    
+</script>
+</body>
+</html>

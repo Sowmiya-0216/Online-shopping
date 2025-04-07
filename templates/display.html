@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <title>htmlpage 4</title>
+   <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    input{
+        border: none;
+        padding: 10px;
+        
+        font-size:15px;
+        background-color: rgb(245, 247, 246);
+    }
+    input:focus{
+        outline:none;
+    }
+    button{
+        padding: 10px;
+        border-radius: 5px;
+    }
+   </style>
+</head>
+<body>
+    {% if item.id %}
+    <form method="POST" action="{% url 'update_item' item.id %}">
+    {% else %}
+    <form method="POST" action="#">
+    {% endif %}
+        {% csrf_token %}
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="{{ item.mail }}">
+    
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" value="{{ item.phone }}">
+    
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="pwd" value="{{ item.pwd }}">
+    
+        <button type="submit">Update</button>
+    </form>
+    <p>Are you sure you want to delete "{{ item.mail }}"?</p>
+<form method="POST" action="{% url 'delete_item' item.id %}">
+    {% csrf_token %}
+    <button type="submit">Yes, Delete</button>
+    <a href="{% url 'htmlpage21' %}">Cancel</a>
+</form>
+
+
+    <!-- Auto-refresh after clicking "Update" -->
+    <script>
+        document.querySelector("form").addEventListener("submit", function() {
+            setTimeout(function() {
+                location.reload();
+            }, 500); // Refresh after 0.5 seconds
+        });
+    </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <title>htmlpage 4</title>
+   <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    input{
+        border: none;
+        padding: 10px;
+        width:600px;
+        height: 40px;
+        font-size:15px;
+        background-color: rgb(245, 247, 246);
+    }
+    input:focus{
+        outline:none;
+    }
+    button{
+        padding: 10px;
+        border-radius: 5px;
+    }
+   </style>
+</head>
+<body>
+    <form method="POST" action="{% url 'htmlpage5' %}">
+        {% csrf_token %}
+    <input type="text" placeholder="Product Name" name="name" class="b" id="n" >  
+    <br><br>
+    <input type="text" placeholder="URL" name="imgurl" class="b" id="n1" >
+    <br><br>
+    <input type="text" placeholder="Description" name="des" class="b"  id="n2">
+    <br><br>
+    <input type="text" placeholder="Price" name="price" onChange="handleInputChange()"class="b" id="n3" >
+    <br><br> 
+    <button type="submit" class="c1">add</button>
+    </form>
+   
+   
+</body>
+</html>

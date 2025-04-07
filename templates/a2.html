@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <title>My Template</title>
+   <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    ol li{
+        list-style-type: none;
+       
+    }
+    li{
+        padding: 10px;
+        margin-right: 15px;
+    }
+    ol{
+        display: flex;
+    }
+    input{
+        border:none;
+        width:600px;
+        height: 20px;
+        font-size:15px;
+        background-color: rgb(245, 247, 246);
+    }
+    input:focus{
+        outline:none;
+    }
+    .a{
+        background-color: rgb(246, 248, 247);
+        margin:12px;
+        border-radius: 5px;
+    }
+    .a1{
+        background-color: white;
+        color: blue;
+        font-size: 20px;
+        margin: 15px;
+    }
+    .a2{
+        color: white;
+        font-size: 20px;
+        margin-top: 7px; 
+    }
+    .fa{
+        padding: 5px;
+    }
+    h1{
+        color: white;
+    }
+    p{
+        color: rgb(238, 238, 243);
+        font-size: 18px;
+    }
+    .x{
+        background-color: blue;
+        margin-top: 5px;    
+    }
+    img,h4{
+        margin-left: 40px;
+    }
+    .x1{
+        display:flex;
+        margin-top: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    .x2{
+        background-color: rgb(46, 46, 222);
+        height:500px;
+        padding: 40px;
+    }
+    .x3{
+        background-color: white;
+        height:500px;
+        padding: 40px;
+    }
+    body{
+        background-color: rgb(233, 230, 237);
+
+    }
+    .b{
+        width:500px;
+        background-color: white;
+    }
+    .c{
+        color:rgb(190, 181, 181);
+        margin-bottom: 30px;
+
+    }
+    .c1{
+        background-color: rgb(237, 116, 29);
+        width:400px;
+        height:50px;
+        padding: 7px;
+        margin-bottom: 100px;
+    }
+    .c2{
+        color:rgb(80, 80, 239);
+    }
+    .d li{  
+        margin-right: 15px;
+        margin-left: 40px;   
+    }
+    .d{
+        height:50px;
+        background-color: white;
+    }
+    nav ol li{
+        float:left;
+        position:relative;
+    }
+    nav ol li d1{
+        text-decoration: none;
+        padding: 10px;
+        display:block;
+    }
+    nav ol li ul{
+        display:none;
+        position:absolute;
+    }
+    nav ol li:hover ul{
+        display:block
+    }
+    .x4{
+        margin-top: 170px;
+        margin-right: 30px;
+        border-radius: 10px;
+    }
+    button{
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .ans1{
+      
+      font-size: 15px; 
+      margin-right: 400px;
+      margin-bottom: 20px; 
+    }
+    .z1{
+        color: green;
+    }
+    .z2{
+        color: red;
+    }
+   </style>
+</head>
+<body>
+    <div class="x">
+        <ol>
+             <div><li> <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"width="80px"></li>
+            <h4> Explore Plus</h4>
+             </div>   
+             <div class="a"><li ><input type="text"placeholder="Search for Products,Brands and More"> <i class="fa fa-search"></i></li></div>
+             <li class="a1"> Login </li>
+             
+             <li class="a2"> Become a Seller</li>
+             <li class="a2"> More <i class="fa  fa-chevron-down"></i></li>
+             <li class="a2"><i class="fa fa-shopping-cart" ></i> cart </li>
+        </ol>
+    </div>
+    <center>
+    <div class="d"> 
+        <nav>
+        <ol>
+            <li>Electronics 
+               <ul  class="d1">
+                <li>Mobiles</li>
+                <li>Mi</li>
+                <li>Realme</li>
+                <li>Samsung</li>
+                <li>OPPO</li>
+                <li>Apple</li>
+                <li>Vivo</li>
+                <li>Honor</li>
+               </ul>
+            </li>
+            <li>TVs & Appliances</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>Baby & Kids</li>
+            <li>Home & Furniture</li>
+            <li>Sports, Books & More  </li>
+            <li>Flights</li>
+            <li>Offer Zone</li>
+        </ol>
+    </nav>   
+    </div>
+    </center>
+    <center>
+    <div class="x1">
+        <div class="x2">   
+            <h1> Looks like you're <br>new here!</h1>
+            <p>Sign up with your mobile number to get started</p>  
+            <img src="https://cdn3.vectorstock.com/i/1000x1000/54/82/landing-page-shopping-isometric-laptop-vector-24775482.jpg" width="200px"  class="x4">  
+        </div>
+        <div class="x3">
+           
+            <form method="POST" action="{% url 'htmlpage21' %}">
+                {% csrf_token %}
+            <input type="text" placeholder="Enter Email ID" name="email" class="b" id="n" >  
+            <hr><br><br>
+            
+            <input type="number" placeholder="Enter Mobile number" name="mobile" class="b" id="n1" >
+            <hr><br><br>
+            <input type="text" placeholder="Enter Password" name="pwd" class="b"  id="n2">
+            <hr><br><br>
+            <input type="text" placeholder="Enter Confirm Password" name="cpwd" onChange="handleInputChange()"class="b" id="n3" >
+            <hr><br><br>
+            <h1 id="ans" class="ans1"></h1>
+            <p class="c">By continuing, you agree to Flipkart's Terms of Use and Privacy Policy.</p>
+            <button type="submit" class="c1">add</button>
+            <p class="c2"> Existing User?Log in</p>
+            </form>
+        </div>
+    </div>
+    </center>
+    <script>
+         function handleInputChange(){
+           x=document.getElementById("n2").value;
+           x1=document.getElementById("n3").value;
+           if(x==x1){
+            document.getElementById("ans").classList.add("z1")
+           }
+           else{
+            document.location.href = "http://127.0.0.1:8000/htmlpage2/";
+            document.getElementById("ans").innerHTML="Not matched"
+            document.getElementById("ans").classList.add("z2")
+           }
+         } 
+function sowmi(){
+   let a= document.getElementById("n").value;
+   localStorage.setItem('email',a);
+
+   let a1= document.getElementById("n1").value;
+   localStorage.setItem('phno',a1);
+
+   let a2= document.getElementById("n2").value;
+   localStorage.setItem('pwd',a2);
+
+   let a3= document.getElementById("n3").value;
+   localStorage.setItem('cpwd',a3);
+
+   if(x==x1){
+        document.location.href = "http://127.0.0.1:8000/htmlpage1/";
+           }
+           else{
+            document.location.href = "http://127.0.0.1:8000/htmlpage2/";
+           
+           }
+         } 
+
+        
+         
+
+         
+    </script>
+</body>
+</html>
